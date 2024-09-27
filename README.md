@@ -1,19 +1,25 @@
-Ham Prefix API Lookup
-This Python script (ham_prefix_api.py) is designed to query the HamNut API to retrieve detailed information about ham radio prefixes. Given a prefix (extracted from a callsign), it returns various details such as country name, CQ zone, ITU zone, continent, and more.
+# Ham Prefix API Lookup
 
-Features
-Prefix Lookup: Given a ham radio callsign prefix, the script retrieves information about the associated country and radio zone details using the HamNut API.
-Standalone and Importable: The script can be run on its own to look up a predefined ham radio prefix or can be imported into other Python scripts for use in larger projects.
-API Information
+This Python script (`ham_prefix_api.py`) is designed to query the HamNut API to retrieve detailed information about ham radio prefixes. Given a prefix (extracted from a callsign), it returns various details such as country name, CQ zone, ITU zone, continent, and more.
+
+## Features
+
+- **Prefix Lookup:** Given a ham radio callsign prefix, the script retrieves information about the associated country and radio zone details using the [HamNut API](https://api.hamnut.com/).
+- **Standalone and Importable:** The script can be run on its own to look up a predefined ham radio prefix or can be imported into other Python scripts for use in larger projects.
+
+## API Information
+
 The script uses the following HamNut API endpoint:
 
-bash
-Copy code
+
+
+```bash
 GET https://api.hamnut.com/v1/call-signs/prefixes?prefix=<PREFIX>
+```
 This API returns detailed information about the given ham radio prefix, including the country name, continent, and various other details.
 
 Example API Response
-json
+```json
 Copy code
 {
   "status": "ok",
@@ -27,6 +33,7 @@ Copy code
   "primaryDXCCPrefix": "K",
   "_t": "2024-09-26T15:41:49Z"
 }
+```
 Usage
 1. Run the Script Directly
 When the script is run directly, it uses a predefined ham radio prefix to fetch information. By default, the prefix used is 'k2'.
