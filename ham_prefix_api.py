@@ -1,14 +1,15 @@
 import requests
 
-def get_ham_radio_prefix_info(prefix_or_callsign):
+def get_ham_radio_prefix_info(prefix_or_callsign, key=None):
     """
     Function to get ham radio prefix information from the HamNut API.
     
     Args:
         prefix_or_callsign (str): The ham radio prefix or full callsign to look up.
+        key (str, optional): The specific part of the JSON to return (e.g., "countryName").
         
     Returns:
-        dict: The response data as a dictionary if successful, None otherwise.
+        dict or str: The response data as a dictionary if successful, or a specific key value if provided. None otherwise.
     """
     # Check if the input is a full callsign and extract the prefix
     prefix = extract_prefix(prefix_or_callsign)
@@ -28,7 +29,15 @@ def get_ham_radio_prefix_info(prefix_or_callsign):
         
         # Check if the request was successful
         if response.status_code == 200:
-            return response.json()  # Return the JSON data as a dictionary
+            data = response.json()  # Parse the JSON data
+
+            # If a specific key is requested, return only that part of the data
+            if key:
+                return data.get(key, f"{key} not found in the response.")
+            
+            # Return the full JSON response if no specific key is requested
+            return data
+        
         else:
             print(f"Error: {response.status_code}")
             return None
