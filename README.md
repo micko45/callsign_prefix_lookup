@@ -1,4 +1,4 @@
-# Ham Prefix API Lookup
+# Ham Radio Callsign Prefix API Lookup
 
 This Python script (`ham_prefix_api.py`) is designed to query the HamNut API to retrieve detailed information about ham radio prefixes. Given a prefix (extracted from a callsign), it returns various details such as country name, CQ zone, ITU zone, continent, and more.
 
