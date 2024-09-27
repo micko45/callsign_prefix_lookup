@@ -114,7 +114,7 @@ If you want to modify the default prefix when running the script standalone, you
 # Default prefix value when running the script standalone
 default_prefix = 'k2'
 ```
-##Limitations
+## Limitations
 The [HamNut API](https://api.hamnut.com/) is in Beta mode only and can only accept up to 5 requests per second. See [HamNut Swagger Doc](https://hamnut.com/swagger/index.html)
 
 ## License
