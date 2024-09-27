@@ -61,8 +61,7 @@ API Response:
 2. Import and Use in Another Python Script
 You can import the get_ham_radio_prefix_info function from ham_prefix_api.py into other Python projects to perform prefix lookups programmatically.
 
-python
-Copy code
+```python
 from ham_prefix_api import get_ham_radio_prefix_info
 
 # Lookup the prefix 'k2'
@@ -91,30 +90,32 @@ def get_ham_radio_prefix_info(prefix, key=None):
     """
 prefix: A string containing the ham radio prefix to look up.
 key: (Optional) A string representing the specific field you want from the API response, such as "countryName" or "continent". If key is not provided, the entire JSON response will be returned.
+```
 Example Usage of the key Argument
-python
-Copy code
+```python
 # Lookup and get only the country name for the prefix 'k2'
 country_name = get_ham_radio_prefix_info('k2', key='countryName')
 print(f"Country Name: {country_name}")
-Requirements
+```
+## Requirements
 Python 3.x
 requests library
 You can install the required library by running:
 
-bash
+```bash
 Copy code
 pip install requests
-Configuration
+```
+## Configuration
 If you want to modify the default prefix when running the script standalone, you can change the default_prefix variable within the ham_prefix_api.py file:
 
-python
-Copy code
+```python
 # Default prefix value when running the script standalone
 default_prefix = 'k2'
-License
+```
+## License
 This project is licensed under the MIT License.
 
-Contributions
+## Contributions
 Feel free to fork the repository and submit pull requests for any improvements or additional features.
 
