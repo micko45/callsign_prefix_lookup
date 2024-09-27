@@ -20,7 +20,6 @@ This API returns detailed information about the given ham radio prefix, includin
 
 Example API Response
 ```json
-Copy code
 {
   "status": "ok",
   "found": true,
@@ -34,17 +33,16 @@ Copy code
   "_t": "2024-09-26T15:41:49Z"
 }
 ```
-Usage
+## Usage
 1. Run the Script Directly
 When the script is run directly, it uses a predefined ham radio prefix to fetch information. By default, the prefix used is 'k2'.
 
-bash
-Copy code
+```bash
 python ham_prefix_api.py
+```
 The output will display the API response for the k2 prefix:
 
-bash
-Copy code
+```bash
 Looking up Maidenhead conversion for: k2
 API Response:
 {
@@ -59,6 +57,7 @@ API Response:
   "primaryDXCCPrefix": "K",
   "_t": "2024-09-26T15:41:49Z"
 }
+```
 2. Import and Use in Another Python Script
 You can import the get_ham_radio_prefix_info function from ham_prefix_api.py into other Python projects to perform prefix lookups programmatically.
 
