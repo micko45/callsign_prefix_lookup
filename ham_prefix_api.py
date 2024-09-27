@@ -1,4 +1,5 @@
 import requests
+import json  # Import the json module for pretty printing
 
 def get_ham_radio_prefix_info(prefix_or_callsign, key=None):
     """
@@ -74,8 +75,8 @@ if __name__ == "__main__":
     result = get_ham_radio_prefix_info(default_prefix)
     
     if result:
-        print("Full API Response:")
-        print(result)
+        print("Full API Response (Pretty Printed):")
+        print(json.dumps(result, indent=4))  # Pretty print the JSON response
         
         # Example: Requesting a specific part, such as the country name
         country_name = get_ham_radio_prefix_info(default_prefix, key="countryName")
