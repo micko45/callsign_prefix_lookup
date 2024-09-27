@@ -35,7 +35,8 @@ Example API Response
 ```
 ## Usage
 1. Run the Script Directly
-When the script is run directly, it uses a predefined ham radio prefix to fetch information. By default, the prefix used is 'k2'.
+   
+  When the script is run directly, it uses a predefined ham radio prefix to fetch information. By default, the prefix used is 'k2'.
 
 ```bash
 python ham_prefix_api.py
